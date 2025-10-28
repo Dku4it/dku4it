@@ -10,17 +10,6 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
-            /* Створити консольну гру "Хрестики-Нолики" для двох гравців, яка дозволяє їм по черзі робити ходи та визначає переможця або нічию.
-            Вимоги:
-                Поле 3x3(матриця).
-                Порожні клітинки, які можна заповнювати символами X та O.
-                Два гравці грають по черзі.
-                Гравець вибирає клітинку, вводячи координати.
-                Перевірка перемоги: три однакові символи в рядку, стовпчику або по діагоналі, або нічия.
-                Повтор гри. */
-
-
                 string goA1;  //input Line number from user
                 string goB1;  //input Column number from user
                 byte goA2;     //Line number for use
@@ -40,11 +29,7 @@ namespace ConsoleApp1
 
                 Console.WriteLine($"     ┌───┬───┬───╖\n   0 ┤ {marks[0, 0]} │ {marks[0, 1]} │ {marks[0, 2]} ║\n     ├───┼───┼───╢\n   1 ┤ {marks[1, 0]} │ {marks[1, 1]} │ {marks[1, 2]} ║\n     ├───┼───┼───╢\n   2 ┤ {marks[2, 0]} │ {marks[2, 1]} │ {marks[2, 2]} ║\n     ╘═╤═╧═╤═╧═╤═╝\n       0   1   2 ");
 
-
-
-
-
-
+                
                 // Input from user a cell cordinates to draw his sign there
                 do
                 {
@@ -87,7 +72,6 @@ namespace ConsoleApp1
                 marks[goA2, goB2] = turnNow;
 
 
-
                 // main screen drawing after current turn
                 Console.Clear();
                 Console.WriteLine("\n   ┌───────────────╖");
@@ -95,7 +79,6 @@ namespace ConsoleApp1
                 Console.WriteLine("   ╘═══════════════╝\n");
 
                 Console.WriteLine($"     ┌───┬───┬───╖\n   0 ┤ {marks[0, 0]} │ {marks[0, 1]} │ {marks[0, 2]} ║\n     ├───┼───┼───╢\n   1 ┤ {marks[1, 0]} │ {marks[1, 1]} │ {marks[1, 2]} ║\n     ├───┼───┼───╢\n   2 ┤ {marks[2, 0]} │ {marks[2, 1]} │ {marks[2, 2]} ║\n     ╘═╤═╧═╤═╧═╤═╝\n       0   1   2 ");
-
 
 
                 // Checking: Is some player has a winning combination after current turn
@@ -164,16 +147,7 @@ namespace ConsoleApp1
                 // Passing the turn to the next player
                 if (turnNow == 'X') { turnNow = 'O'; } else { turnNow = 'X'; }
             }
-
-            
-
-
-
-
-
-
-
-
         }
     }
 }
+
